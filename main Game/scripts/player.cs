@@ -26,11 +26,14 @@ public partial class player : CharacterBody2D
 		if (inputDirection != new Vector2(0, 0))
 		{
 			PlayAnimation(1);
-			walking.Play();
+			if (walking.Playing != true)
+				walking.Play();
 			current_dir = inputDirection;
 		}
 		else
 			PlayAnimation(0);
+
+
 
 
 	}
@@ -40,6 +43,8 @@ public partial class player : CharacterBody2D
 		GetInput();     // Henter Player keyboard input
 		MoveAndSlide(); // Flytter sig i henhold fysikkens kræfter og glider af kolliderende Objekter
 	}
+
+
 
 	void PlayAnimation(int movement)
 	{
