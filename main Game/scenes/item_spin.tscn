@@ -1,10 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://c10hxrsit8jk"]
+[gd_scene load_steps=29 format=3 uid="uid://c10hxrsit8jk"]
 
 [ext_resource type="Script" path="res://scripts/item_spin.cs" id="1_rbgeu"]
 [ext_resource type="Texture2D" uid="uid://bwxqtl0uj1lgj" path="res://art/objects/gem.png" id="1_tgw7l"]
 [ext_resource type="Texture2D" uid="uid://dc7xkgqor2fv7" path="res://art/objects/coin_silver.png" id="2_6q4kg"]
 [ext_resource type="Texture2D" uid="uid://bcwwngd7nqp6g" path="res://art/objects/coin_gold.png" id="3_evqm3"]
 [ext_resource type="AudioStream" uid="uid://c37ujmhuatc03" path="res://sound/pick_up.ogg" id="5_p3ux8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8k42"]
+radius = 7.0
+height = 22.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4qcn"]
 atlas = ExtResource("1_tgw7l")
@@ -171,15 +175,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="item_spin" type="Node2D"]
+[node name="item_spin" type="Area2D"]
 script = ExtResource("1_rbgeu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_x8k42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_kos54")
-animation = &"gold_coin_spin"
-frame = 7
-frame_progress = 0.79861
+animation = &"silver_coin_spin"
+autoplay = "silver_coin_spin"
+frame_progress = 0.189007
 
 [node name="pick_up" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_p3ux8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
