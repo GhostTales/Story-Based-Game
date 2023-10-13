@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class Node2D : Godot.Node2D
+public partial class MorseGenerator : Godot.Node2D
 {
 	private Label[] signs;
 	private string[] morse = { "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----." };
