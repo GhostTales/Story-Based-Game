@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc4xp45mgernb"]
+[gd_scene load_steps=4 format=3 uid="uid://ixarr32csbal"]
 
 [ext_resource type="Script" path="res://scripts/Decoder.cs" id="1_ameaq"]
 [ext_resource type="Texture2D" uid="uid://cq8jcgdwrrdku" path="res://art/objects/Decoder.png" id="1_rwlur"]

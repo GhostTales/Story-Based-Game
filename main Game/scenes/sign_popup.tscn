@@ -9,6 +9,7 @@ radius = 38.0132
 [sub_resource type="LabelSettings" id="LabelSettings_rnul6"]
 
 [node name="SignPopup" type="Area2D"]
+z_index = 10
 script = ExtResource("1_sx7uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,7 +17,6 @@ scale = Vector2(0.75, 0.75)
 shape = SubResource("CircleShape2D_lyb1p")
 
 [node name="Label" type="Label" parent="CollisionShape2D"]
-z_index = 10
 offset_left = -13.3333
 offset_top = -42.6667
 offset_right = 12.6667
@@ -28,7 +28,7 @@ vertical_alignment = 1
 justification_flags = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-z_index = 9
+z_index = -1
 position = Vector2(0, -29.3333)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_8iipe")

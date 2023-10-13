@@ -13,13 +13,11 @@ public partial class SignPopup : Area2D
 	private void _on_body_entered(CharacterBody2D body)
 	{
 		this.Visible = true;
-		GD.Print(body);
 	}
 
 	private void _on_body_exited(CharacterBody2D body)
 	{
 		this.Visible = false;
-		GD.Print("hide");
 	}
 
 }

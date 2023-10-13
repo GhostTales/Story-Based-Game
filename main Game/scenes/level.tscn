@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://bl5pcx4l11fjg"]
+[gd_scene load_steps=13 format=3 uid="uid://bl5pcx4l11fjg"]
 
 [ext_resource type="Texture2D" uid="uid://c4rytob3e17o5" path="res://art/tilesets/plains.png" id="1_3dy36"]
 [ext_resource type="PackedScene" uid="uid://yhuwhw5i6016" path="res://scenes/player.tscn" id="1_y2xng"]
 [ext_resource type="Texture2D" uid="uid://flei7t7ieo07" path="res://art/tilesets/grass.png" id="2_7tskl"]
 [ext_resource type="Texture2D" uid="uid://cvbh8lbooc13u" path="res://art/objects/objects.png" id="3_sna8h"]
 [ext_resource type="PackedScene" uid="uid://c10hxrsit8jk" path="res://scenes/item_spin.tscn" id="5_i2dwq"]
+[ext_resource type="Script" path="res://scripts/Node2D.cs" id="6_6tnup"]
 [ext_resource type="PackedScene" uid="uid://bbfgc4fvupdo" path="res://scenes/sign_popup.tscn" id="6_52haf"]
-[ext_resource type="PackedScene" uid="uid://cc4xp45mgernb" path="res://scenes/Decoder popup.tscn" id="7_qoh5f"]
+[ext_resource type="PackedScene" uid="uid://ixarr32csbal" path="res://scenes/Decoder popup.tscn" id="7_qoh5f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asm83"]
 texture = ExtResource("1_3dy36")
@@ -249,20 +250,23 @@ position = Vector2(1, -5)
 [node name="item_spin" parent="." instance=ExtResource("5_i2dwq")]
 position = Vector2(54, -6)
 
-[node name="SignPopup2" parent="." instance=ExtResource("6_52haf")]
-position = Vector2(0, -9)
-
-[node name="Label" parent="SignPopup2/CollisionShape2D" index="0"]
-text = ".-.-."
-
-[node name="SignPopup" parent="." instance=ExtResource("6_52haf")]
-position = Vector2(41, -13)
-
-[node name="Label" parent="SignPopup/CollisionShape2D" index="0"]
-text = "-.-.-"
-
 [node name="Decoder" parent="." instance=ExtResource("7_qoh5f")]
 position = Vector2(157, -87)
 
-[editable path="SignPopup2"]
-[editable path="SignPopup"]
+[node name="MorseGenrator" type="Node2D" parent="."]
+script = ExtResource("6_6tnup")
+
+[node name="SignPopup" parent="MorseGenrator" instance=ExtResource("6_52haf")]
+position = Vector2(41, -13)
+
+[node name="Label" parent="MorseGenrator/SignPopup/CollisionShape2D" index="0"]
+text = "-.-.-"
+
+[node name="SignPopup2" parent="MorseGenrator" instance=ExtResource("6_52haf")]
+position = Vector2(0, -9)
+
+[node name="Label" parent="MorseGenrator/SignPopup2/CollisionShape2D" index="0"]
+text = ".-.-."
+
+[editable path="MorseGenrator/SignPopup"]
+[editable path="MorseGenrator/SignPopup2"]
