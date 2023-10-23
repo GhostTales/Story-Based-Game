@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://canhplqcv26sa"]
+
+[ext_resource type="Texture2D" uid="uid://22dj36as4qw0" path="res://art/objects/rock.png" id="1_pn5as"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o50bm"]
+size = Vector2(36, 30)
+
+[node name="Big stone" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -2
+position = Vector2(-3, 3)
+shape = SubResource("RectangleShape2D_o50bm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(1.99998, -4)
+scale = Vector2(2.30566, 2.08154)
+texture = ExtResource("1_pn5as")

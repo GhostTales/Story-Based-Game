@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bl5pcx4l11fjg"]
+[gd_scene load_steps=18 format=3 uid="uid://bl5pcx4l11fjg"]
 
 [ext_resource type="Texture2D" uid="uid://c4rytob3e17o5" path="res://art/tilesets/plains.png" id="1_3dy36"]
 [ext_resource type="PackedScene" uid="uid://yhuwhw5i6016" path="res://scenes/player.tscn" id="1_y2xng"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dur81ilsrqgxt" path="res://scenes/Decoder Static.tscn" id="9_gr5b5"]
 [ext_resource type="PackedScene" uid="uid://cfq6qiyj7adtn" path="res://scenes/TrykPlade.tscn" id="9_k1fkk"]
 [ext_resource type="PackedScene" uid="uid://bkgmlubxvq87d" path="res://scenes/Dynamite.tscn" id="11_vamu7"]
+[ext_resource type="PackedScene" uid="uid://cptsfmrssqfyy" path="res://scenes/moveable rock.tscn" id="12_fohgu"]
+[ext_resource type="PackedScene" uid="uid://canhplqcv26sa" path="res://scenes/Big stone.tscn" id="13_w1uae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asm83"]
 texture = ExtResource("1_3dy36")
@@ -274,3 +276,9 @@ position = Vector2(15, 9)
 
 [node name="Dynamite" parent="." instance=ExtResource("11_vamu7")]
 position = Vector2(-82, 6)
+
+[node name="Movable Rock" parent="." instance=ExtResource("12_fohgu")]
+position = Vector2(-91, -9)
+
+[node name="Big stone" parent="." instance=ExtResource("13_w1uae")]
+position = Vector2(-89, -6)
