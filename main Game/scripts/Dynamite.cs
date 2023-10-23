@@ -3,8 +3,10 @@ using Godot;
 public partial class Dynamite : Area2D
 {
 	private const int StaticState = 1;
-	private const int Exploding = 2;
-	private const int Done = 3;
+	private const int One = 2;
+	private const int Three = 3;
+	private const int Nine = 4;
+	private const int Done = 5;
 	
 	private int CurrentState = StaticState;
 	
@@ -18,10 +20,21 @@ public override void _Ready()
 
 public override void _PhysicsProcess(double delta)
 	{
-		if( CurrentState == StaticState && Input.IsKeyPressed(Key.Kp8)) {
+		if( CurrentState == StaticState && Input.IsKeyPressed(Key.Kp1)) {
+			anim.Play("One");
+			CurrentState = One;
+			}
+		if( CurrentState == One && Input.IsKeyPressed(Key.Kp3)) {
+			anim.Play("Three");
+			CurrentState = Three;
+			}
+		if( CurrentState == Three && Input.IsKeyPressed(Key.Kp9)) {
+			anim.Play("Nine");
+			CurrentState = Nine;
+			}
+		if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp4)) {
 			anim.Play("Explosion");
 			CurrentState = Done;
-			
-		}
+			}
 	}
 }
