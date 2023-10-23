@@ -253,7 +253,7 @@ position = Vector2(1, -5)
 [node name="item_spin" parent="." instance=ExtResource("5_i2dwq")]
 position = Vector2(54, -6)
 
-[node name="Decoder" parent="." instance=ExtResource("7_qoh5f")]
+[node name="DecoderPopup" parent="." instance=ExtResource("7_qoh5f")]
 position = Vector2(111, -97)
 
 [node name="MorseGenrator" type="Node2D" parent="."]
@@ -265,12 +265,12 @@ position = Vector2(29, -9)
 [node name="SignPopup2" parent="MorseGenrator" instance=ExtResource("6_52haf")]
 position = Vector2(0, -9)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("9_gr5b5")]
+[node name="Decoder2" parent="." instance=ExtResource("9_gr5b5")]
 position = Vector2(125, -66)
 
 [node name="TrykPlade" parent="." instance=ExtResource("9_k1fkk")]
 z_index = -1
 position = Vector2(15, 9)
 
-[node name="Area2D" parent="." instance=ExtResource("11_vamu7")]
+[node name="Dynamite" parent="." instance=ExtResource("11_vamu7")]
 position = Vector2(-82, 6)
