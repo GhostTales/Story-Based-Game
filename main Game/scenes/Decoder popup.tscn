@@ -3,19 +3,19 @@
 [ext_resource type="Script" path="res://scripts/Decoder.cs" id="1_ameaq"]
 [ext_resource type="Texture2D" uid="uid://cq8jcgdwrrdku" path="res://art/objects/Decoder.png" id="1_rwlur"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jrjdt"]
-radius = 39.1152
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdsyf"]
+size = Vector2(8, 8)
 
 [node name="Decoder" type="Area2D"]
 script = ExtResource("1_ameaq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 29)
-shape = SubResource("CircleShape2D_jrjdt")
+position = Vector2(14, 31)
+shape = SubResource("RectangleShape2D_hdsyf")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(2, -17)
-scale = Vector2(0.0749999, 0.0688477)
+position = Vector2(-6, -23)
+scale = Vector2(0.0245066, 0.0229685)
 texture = ExtResource("1_rwlur")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

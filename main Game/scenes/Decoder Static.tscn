@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dur81ilsrqgxt"]
+
+[ext_resource type="Texture2D" uid="uid://cq8jcgdwrrdku" path="res://art/objects/Decoder.png" id="1_3drt7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibnt1"]
+size = Vector2(5, 7)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.312487, 0.812493)
+scale = Vector2(0.00442025, 0.00462581)
+texture = ExtResource("1_3drt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ibnt1")
