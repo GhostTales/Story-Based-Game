@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://cq8jcgdwrrdku" path="res://art/objects/Decoder.png" id="1_rwlur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hdsyf"]
-size = Vector2(8, 8)
+size = Vector2(14, 15)
 
 [node name="Decoder" type="Area2D"]
 script = ExtResource("1_ameaq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, 31)
+position = Vector2(13, 31)
 shape = SubResource("RectangleShape2D_hdsyf")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-6, -23)
+position = Vector2(-7, -26)
 scale = Vector2(0.0245066, 0.0229685)
 texture = ExtResource("1_rwlur")
 
