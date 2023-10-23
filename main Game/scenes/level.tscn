@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bl5pcx4l11fjg"]
+[gd_scene load_steps=16 format=3 uid="uid://bl5pcx4l11fjg"]
 
 [ext_resource type="Texture2D" uid="uid://c4rytob3e17o5" path="res://art/tilesets/plains.png" id="1_3dy36"]
 [ext_resource type="PackedScene" uid="uid://yhuwhw5i6016" path="res://scenes/player.tscn" id="1_y2xng"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bbfgc4fvupdo" path="res://scenes/sign_popup.tscn" id="6_52haf"]
 [ext_resource type="PackedScene" uid="uid://ixarr32csbal" path="res://scenes/Decoder popup.tscn" id="7_qoh5f"]
 [ext_resource type="Script" path="res://scripts/MorseGenerator.cs" id="7_w76fm"]
-[ext_resource type="PackedScene" path="res://scenes/Decoder Static.tscn" id="9_gr5b5"]
+[ext_resource type="PackedScene" uid="uid://dur81ilsrqgxt" path="res://scenes/Decoder Static.tscn" id="9_gr5b5"]
 [ext_resource type="PackedScene" uid="uid://cfq6qiyj7adtn" path="res://scenes/TrykPlade.tscn" id="9_k1fkk"]
+[ext_resource type="PackedScene" uid="uid://bkgmlubxvq87d" path="res://scenes/Dynamite.tscn" id="11_vamu7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asm83"]
 texture = ExtResource("1_3dy36")
@@ -265,8 +266,11 @@ position = Vector2(29, -9)
 position = Vector2(0, -9)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("9_gr5b5")]
-position = Vector2(124, -67)
+position = Vector2(125, -66)
 
 [node name="TrykPlade" parent="." instance=ExtResource("9_k1fkk")]
 z_index = -1
 position = Vector2(15, 9)
+
+[node name="Area2D" parent="." instance=ExtResource("11_vamu7")]
+position = Vector2(-82, 6)
