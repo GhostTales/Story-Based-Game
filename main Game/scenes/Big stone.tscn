@@ -1,17 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://canhplqcv26sa"]
+[gd_scene load_steps=11 format=3 uid="uid://canhplqcv26sa"]
 
 [ext_resource type="Texture2D" uid="uid://22dj36as4qw0" path="res://art/objects/rock.png" id="1_pn5as"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o50bm"]
-size = Vector2(36, 30)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7jf2n"]
+a = Vector2(-24, 14)
+b = Vector2(-19, 19)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cvc7u"]
+a = Vector2(-19, 19)
+b = Vector2(28, 22)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_v5fe7"]
+a = Vector2(34, 12)
+b = Vector2(29, 22)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ao15p"]
+a = Vector2(21, 9)
+b = Vector2(34, 11)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_von3d"]
+a = Vector2(9, -9)
+b = Vector2(20, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nqynb"]
+a = Vector2(9, -9)
+b = Vector2(-12, -18)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7s7ug"]
+a = Vector2(-11, -17)
+b = Vector2(-22, -9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ejc7e"]
+a = Vector2(-22, -8)
+b = Vector2(-22, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5w46p"]
+a = Vector2(-24, 2)
+b = Vector2(-23, 15)
 
 [node name="Big stone" type="StaticBody2D"]
 y_sort_enabled = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-z_index = -2
-position = Vector2(-3, 3)
-shape = SubResource("RectangleShape2D_o50bm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 2
@@ -19,3 +47,30 @@ visibility_layer = 2
 position = Vector2(1.99998, -4)
 scale = Vector2(2.30566, 2.08154)
 texture = ExtResource("1_pn5as")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_7jf2n")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_cvc7u")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_v5fe7")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_ao15p")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_von3d")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_nqynb")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_7s7ug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_ejc7e")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_5w46p")
