@@ -28,13 +28,97 @@ public override void _PhysicsProcess(double delta)
 			anim.Play("Three");
 			CurrentState = Three;
 			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp2)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp4)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp5)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp6)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp7)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp8)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == One && Input.IsKeyPressed(Key.Kp9)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
 		if( CurrentState == Three && Input.IsKeyPressed(Key.Kp9)) {
 			anim.Play("Nine");
 			CurrentState = Nine;
 			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp1)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp2)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp4)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp5)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp6)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp7)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Three && Input.IsKeyPressed(Key.Kp8)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
 		if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp4)) {
 			anim.Play("Explosion");
 			CurrentState = Done;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp1)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp2)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp3)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp5)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp6)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp7)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
+			}
+			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp8)) {
+			anim.Play("Static");
+			CurrentState = StaticState;
 			}
 	}
 }
