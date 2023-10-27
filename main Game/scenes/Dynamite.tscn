@@ -1,7 +1,47 @@
-[gd_scene load_steps=31 format=3 uid="uid://bkgmlubxvq87d"]
+[gd_scene load_steps=41 format=3 uid="uid://bkgmlubxvq87d"]
 
 [ext_resource type="Script" path="res://scripts/Dynamite.cs" id="1_s8lsn"]
 [ext_resource type="Texture2D" uid="uid://b3nsgqknq3bco" path="res://art/objects/Dynamite sprite sheet.png" id="1_vtwkc"]
+[ext_resource type="Texture2D" uid="uid://22dj36as4qw0" path="res://art/objects/rock.png" id="2_qur14"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8j6jb"]
+radius = 43.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1g53c"]
+a = Vector2(-24, 14)
+b = Vector2(-19, 19)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_prqte"]
+a = Vector2(-19, 19)
+b = Vector2(7.80688, 19.697)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0upjc"]
+a = Vector2(33.3961, 16.3341)
+b = Vector2(29, 22)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r3l1l"]
+a = Vector2(21, 9)
+b = Vector2(34, 11)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ljyua"]
+a = Vector2(12.144, -1.92165)
+b = Vector2(18.6498, 6.24538)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_86iye"]
+a = Vector2(9, -9)
+b = Vector2(-2.60229, -14.8928)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fer5d"]
+a = Vector2(-13.0115, -16.3341)
+b = Vector2(-19.9509, -9.60827)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2beyp"]
+a = Vector2(-22, -8)
+b = Vector2(-22, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iyogo"]
+a = Vector2(-25.1555, 4.32372)
+b = Vector2(-23, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64khx"]
 atlas = ExtResource("1_vtwkc")
@@ -213,18 +253,75 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8j6jb"]
-radius = 21.3776
-
 [node name="Dynamite" type="Area2D"]
 script = ExtResource("1_s8lsn")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -4)
+shape = SubResource("CircleShape2D_8j6jb")
+
+[node name="Stone" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stone"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(2, 5)
+scale = Vector2(3.11328, 2.77734)
+texture = ExtResource("2_qur14")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stone"]
+position = Vector2(22, -3)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_1g53c")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stone"]
+position = Vector2(19, -4)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_prqte")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stone"]
+position = Vector2(-31, -6)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_0upjc")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Stone"]
+position = Vector2(-31, 2)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_r3l1l")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stone"]
+position = Vector2(-19, 7)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_ljyua")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Stone"]
+position = Vector2(-8, 20)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_86iye")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Stone"]
+position = Vector2(16, 22)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_fer5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone"]
+position = Vector2(21, 12)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_2beyp")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Stone"]
+position = Vector2(25, 4)
+scale = Vector2(2.30566, 2.08154)
+shape = SubResource("SegmentShape2D_iyogo")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(6, 4)
+position = Vector2(-2, 37)
 scale = Vector2(0.65625, 0.71875)
 sprite_frames = SubResource("SpriteFrames_nkqj7")
 animation = &"Explosion"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9, 12)
-shape = SubResource("CircleShape2D_8j6jb")
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

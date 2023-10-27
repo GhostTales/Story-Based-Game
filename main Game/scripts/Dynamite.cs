@@ -7,16 +7,25 @@ public partial class Dynamite : Area2D
 	private const int Three = 3;
 	private const int Nine = 4;
 	private const int Done = 5;
-	
+
 	private int CurrentState = StaticState;
-	
+
 	private AnimatedSprite2D anim;
+
+	private Timer delayTimer;
 
 public override void _Ready()
 {
 	anim =  GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	anim.Play("Static");
+	
+	delayTimer =  GetNode<Timer>("Timer");
 }
+
+void _on_timer_timeout()
+			{
+			this.QueueFree();
+			}
 
 public override void _PhysicsProcess(double delta)
 	{
@@ -90,6 +99,7 @@ public override void _PhysicsProcess(double delta)
 			}
 		if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp4)) {
 			anim.Play("Explosion");
+			delayTimer.Start();
 			CurrentState = Done;
 			}
 			if( CurrentState == Nine && Input.IsKeyPressed(Key.Kp1)) {
