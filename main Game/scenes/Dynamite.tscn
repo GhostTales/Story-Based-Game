@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bkgmlubxvq87d"]
+[gd_scene load_steps=44 format=3 uid="uid://bkgmlubxvq87d"]
 
 [ext_resource type="Script" path="res://scripts/Dynamite.cs" id="1_s8lsn"]
 [ext_resource type="Texture2D" uid="uid://b3nsgqknq3bco" path="res://art/objects/Dynamite sprite sheet.png" id="1_vtwkc"]
@@ -8,40 +8,50 @@
 radius = 43.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1g53c"]
-a = Vector2(-24, 14)
-b = Vector2(-19, 19)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_prqte"]
-a = Vector2(-19, 19)
-b = Vector2(7.80688, 19.697)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_0upjc"]
-a = Vector2(33.3961, 16.3341)
-b = Vector2(29, 22)
+a = Vector2(-27.3241, 17.7753)
+b = Vector2(-19.0835, 17.7753)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r3l1l"]
-a = Vector2(21, 9)
-b = Vector2(34, 11)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ljyua"]
-a = Vector2(12.144, -1.92165)
-b = Vector2(18.6498, 6.24538)
+a = Vector2(23.8543, 10.0887)
+b = Vector2(23.8543, 15.8536)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_86iye"]
-a = Vector2(9, -9)
-b = Vector2(-2.60229, -14.8928)
+a = Vector2(6.50573, -9.12786)
+b = Vector2(-14.7463, -9.12786)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fer5d"]
-a = Vector2(-13.0115, -16.3341)
-b = Vector2(-19.9509, -9.60827)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_2beyp"]
-a = Vector2(-22, -8)
-b = Vector2(-22, 3)
+a = Vector2(-9.54174, -15.8536)
+b = Vector2(-9.54174, -11.5299)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_iyogo"]
-a = Vector2(-25.1555, 4.32372)
-b = Vector2(-23, 15)
+a = Vector2(-24.7218, 4.32372)
+b = Vector2(-24.7218, 14.8928)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e7ka"]
+size = Vector2(20, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_41wfn"]
+a = Vector2(7, -1)
+b = Vector2(-3, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eqejh"]
+a = Vector2(13, 8)
+b = Vector2(23, 15)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tydix"]
+a = Vector2(27, 23)
+b = Vector2(47, 23)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_psur1"]
+a = Vector2(-14, 40)
+b = Vector2(39, 40)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3gx1a"]
+a = Vector2(-1, -1)
+b = Vector2(-1, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sd3ru"]
+a = Vector2(0, 2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64khx"]
 atlas = ExtResource("1_vtwkc")
@@ -261,6 +271,7 @@ position = Vector2(-8, -4)
 shape = SubResource("CircleShape2D_8j6jb")
 
 [node name="Stone" type="StaticBody2D" parent="."]
+position = Vector2(0, -17)
 
 [node name="Sprite2D" type="Sprite2D" parent="Stone"]
 light_mask = 2
@@ -270,52 +281,60 @@ scale = Vector2(3.11328, 2.77734)
 texture = ExtResource("2_qur14")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Stone"]
-position = Vector2(22, -3)
+position = Vector2(31, 1)
 scale = Vector2(2.30566, 2.08154)
 shape = SubResource("SegmentShape2D_1g53c")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stone"]
-position = Vector2(19, -4)
-scale = Vector2(2.30566, 2.08154)
-shape = SubResource("SegmentShape2D_prqte")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stone"]
-position = Vector2(-31, -6)
-scale = Vector2(2.30566, 2.08154)
-shape = SubResource("SegmentShape2D_0upjc")
-
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Stone"]
-position = Vector2(-31, 2)
+position = Vector2(-86, -20)
 scale = Vector2(2.30566, 2.08154)
 shape = SubResource("SegmentShape2D_r3l1l")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stone"]
-position = Vector2(-19, 7)
-scale = Vector2(2.30566, 2.08154)
-shape = SubResource("SegmentShape2D_ljyua")
-
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Stone"]
-position = Vector2(-8, 20)
+position = Vector2(0, 17)
 scale = Vector2(2.30566, 2.08154)
 shape = SubResource("SegmentShape2D_86iye")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Stone"]
-position = Vector2(16, 22)
+position = Vector2(48, 46)
 scale = Vector2(2.30566, 2.08154)
 shape = SubResource("SegmentShape2D_fer5d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone"]
-position = Vector2(21, 12)
-scale = Vector2(2.30566, 2.08154)
-shape = SubResource("SegmentShape2D_2beyp")
-
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Stone"]
-position = Vector2(25, 4)
+position = Vector2(24, 4)
 scale = Vector2(2.30566, 2.08154)
 shape = SubResource("SegmentShape2D_iyogo")
 
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Stone"]
+position = Vector2(-1, 44.5)
+shape = SubResource("RectangleShape2D_5e7ka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone"]
+position = Vector2(42, 33)
+shape = SubResource("SegmentShape2D_41wfn")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Stone"]
+position = Vector2(2, -2)
+shape = SubResource("SegmentShape2D_eqejh")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Stone"]
+position = Vector2(0, -2)
+shape = SubResource("SegmentShape2D_tydix")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Stone"]
+position = Vector2(0, 2)
+shape = SubResource("SegmentShape2D_psur1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Stone"]
+position = Vector2(49, 22)
+shape = SubResource("SegmentShape2D_3gx1a")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Stone"]
+position = Vector2(13, -1)
+shape = SubResource("SegmentShape2D_sd3ru")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, 37)
+position = Vector2(-1, 20)
 scale = Vector2(0.65625, 0.71875)
 sprite_frames = SubResource("SpriteFrames_nkqj7")
 animation = &"Explosion"
