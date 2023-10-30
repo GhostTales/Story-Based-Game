@@ -19,9 +19,11 @@ public partial class door : StaticBody2D
 		if (CurrentState == false)
 		{
 			door_sprite.Texture = (Texture2D)GD.Load("res://art/objects/chest_01.png");
+			GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
 		}
 		else
 		{
+			GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
 			door_sprite.Texture = (Texture2D)GD.Load("res://art/objects/coin_silver.png");
 		}
 	}
