@@ -42,11 +42,14 @@ public partial class player : CharacterBody2D
 	{
 		GetInput();     // Henter Player keyboard input
 		MoveAndSlide(); // Flytter sig i henhold fysikkens kræfter og glider af kolliderende Objekter
+
+		Move_Rigidbody(10);
+
 	}
 
 
 
-	void PlayAnimation(int movement)
+	public void PlayAnimation(int movement)
 	{
 
 		Vector2 dir = current_dir;
@@ -86,5 +89,16 @@ public partial class player : CharacterBody2D
 				anim.Play("front_idle");
 		}
 	}
-}
 
+	public void Move_Rigidbody(float push_force)
+	{
+		for (int i = 0; i < GetSlideCollisionCount(); i++)
+		{
+			var c = GetSlideCollision(i);
+			if (c.GetCollider() is RigidBody2D)
+			{
+				(c.GetCollider() as RigidBody2D).ApplyCentralImpulse(-c.GetNormal() * push_force);
+			}
+		}
+	}
+}

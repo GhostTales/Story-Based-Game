@@ -281,11 +281,11 @@ z_index = -1
 position = Vector2(15, 9)
 
 [node name="Movable Rock" parent="." instance=ExtResource("12_fohgu")]
-position = Vector2(20, -2)
+position = Vector2(-76, -14)
 
 [node name="Dynamite" parent="." instance=ExtResource("11_vamu7")]
 y_sort_enabled = true
-position = Vector2(-81, -13)
+position = Vector2(-88, -17)
 
 [node name="Door" parent="." instance=ExtResource("13_4u8au")]
 position = Vector2(77, -22)
