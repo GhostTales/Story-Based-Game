@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbj457ds27eg8"]
+[gd_scene load_steps=3 format=3 uid="uid://b0p2u26bg4jys"]
 
 [ext_resource type="Script" path="res://scripts/door.cs" id="1_dpu8r"]
 
@@ -11,3 +11,5 @@ script = ExtResource("1_dpu8r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(11.5, 50.75)
 shape = SubResource("RectangleShape2D_3mynp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

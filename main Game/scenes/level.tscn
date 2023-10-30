@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bl5pcx4l11fjg"]
+[gd_scene load_steps=18 format=3 uid="uid://bl5pcx4l11fjg"]
 
 [ext_resource type="Texture2D" uid="uid://c4rytob3e17o5" path="res://art/tilesets/plains.png" id="1_3dy36"]
 [ext_resource type="PackedScene" uid="uid://yhuwhw5i6016" path="res://scenes/player.tscn" id="1_y2xng"]
@@ -10,8 +10,9 @@
 [ext_resource type="Script" path="res://scripts/MorseGenerator.cs" id="7_w76fm"]
 [ext_resource type="PackedScene" uid="uid://dur81ilsrqgxt" path="res://scenes/Decoder Static.tscn" id="9_gr5b5"]
 [ext_resource type="PackedScene" uid="uid://cfq6qiyj7adtn" path="res://scenes/TrykPlade.tscn" id="9_k1fkk"]
-[ext_resource type="PackedScene" uid="uid://bkgmlubxvq87d" path="res://scenes/Dynamite.tscn" id="11_vamu7"]
+[ext_resource type="PackedScene" uid="uid://cmu72t545ys6b" path="res://scenes/Dynamite.tscn" id="11_vamu7"]
 [ext_resource type="PackedScene" uid="uid://cptsfmrssqfyy" path="res://scenes/moveable rock.tscn" id="12_fohgu"]
+[ext_resource type="PackedScene" uid="uid://b0p2u26bg4jys" path="res://scenes/door.tscn" id="13_4u8au"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asm83"]
 texture = ExtResource("1_3dy36")
@@ -266,6 +267,12 @@ position = Vector2(29, -9)
 [node name="SignPopup2" parent="MorseGenrator" instance=ExtResource("6_52haf")]
 position = Vector2(0, -9)
 
+[node name="SignPopup3" parent="MorseGenrator" instance=ExtResource("6_52haf")]
+position = Vector2(29, 12)
+
+[node name="SignPopup4" parent="MorseGenrator" instance=ExtResource("6_52haf")]
+position = Vector2(-1, 12)
+
 [node name="Decoder2" parent="." instance=ExtResource("9_gr5b5")]
 position = Vector2(125, -66)
 
@@ -274,8 +281,11 @@ z_index = -1
 position = Vector2(15, 9)
 
 [node name="Movable Rock" parent="." instance=ExtResource("12_fohgu")]
-position = Vector2(-64, -7)
+position = Vector2(20, -2)
 
 [node name="Dynamite" parent="." instance=ExtResource("11_vamu7")]
 y_sort_enabled = true
 position = Vector2(-81, -13)
+
+[node name="Door" parent="." instance=ExtResource("13_4u8au")]
+position = Vector2(77, -22)
