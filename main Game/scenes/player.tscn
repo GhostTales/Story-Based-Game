@@ -415,10 +415,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uchli"]
-size = Vector2(7, 7)
+size = Vector2(9, 7.5)
 
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_4287k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -428,16 +430,16 @@ frame_progress = 0.0254766
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0.5, -1.75)
 shape = SubResource("RectangleShape2D_uchli")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -2)
 zoom = Vector2(4, 4)
-limit_left = -175
-limit_top = -190
-limit_right = 477
-limit_bottom = 154
+limit_left = -20
+limit_top = -20
+limit_right = 435
+limit_bottom = 435
 position_smoothing_enabled = true
 position_smoothing_speed = 2.5
 drag_horizontal_enabled = true

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cptsfmrssqfyy"]
+
+[ext_resource type="Texture2D" uid="uid://22dj36as4qw0" path="res://art/objects/rock.png" id="1_7ke2j"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 15.0
+angular_damp = 15.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7ke2j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(-11, 1, -11, 11, 12, 12, 12, 7, 7, 6, 3, 1)

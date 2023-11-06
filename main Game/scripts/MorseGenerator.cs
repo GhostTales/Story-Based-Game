@@ -6,8 +6,8 @@ public partial class MorseGenerator : Godot.Node2D
 {
 	private Label[] signs;
 	private string[] morse = { "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----." };
-	private int[] codes;
-	private int temp;
+	public int[] codes { get; private set; }
+	private int[] temp = { 1, 3, 9, 4 };
 	private bool generated = false;
 
 	// Called when the node enters the scene tree for the first time.
@@ -34,14 +34,14 @@ public partial class MorseGenerator : Godot.Node2D
 			{
 				signs[i] = (GetNode<Label>($"{this.GetChild(i).GetPath()}/CollisionShape2D/Label"));
 
-				var random = new RandomNumberGenerator();
-				temp = random.RandiRange(0, 9);
-
-				signs[i].Text = morse[temp];
-				codes[i] = temp;
+				//var random = new RandomNumberGenerator();
+				//temp = random.RandiRange(0, 9);
+				signs[i].Text = morse[temp[i]];
+				codes[i] = temp[i];
 
 				generated = true;
 			}
+
 		}
 
 	}
