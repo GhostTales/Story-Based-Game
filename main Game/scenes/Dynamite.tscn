@@ -1,8 +1,8 @@
 [gd_scene load_steps=32 format=3 uid="uid://cmu72t545ys6b"]
 
 [ext_resource type="Script" path="res://scripts/Dynamite.cs" id="1_s8lsn"]
-[ext_resource type="Texture2D" uid="uid://b3nsgqknq3bco" path="res://art/objects/Dynamite sprite sheet.png" id="1_vtwkc"]
-[ext_resource type="Texture2D" uid="uid://22dj36as4qw0" path="res://art/objects/rock.png" id="2_qur14"]
+[ext_resource type="Texture2D" uid="uid://dkxfsj3kifist" path="res://art/objects/Dynamite sprite sheet.png" id="1_vtwkc"]
+[ext_resource type="Texture2D" uid="uid://c7kh3sqe5bl42" path="res://art/objects/rock.png" id="2_qur14"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8j6jb"]
 radius = 43.0
@@ -235,7 +235,7 @@ scale = Vector2(3.11328, 2.77734)
 texture = ExtResource("2_qur14")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stone"]
-polygon = PackedVector2Array(-13, -6, -27, -1, -32, 24, -16, 37, 21, 38, 41, 34, 42, 25, 24, 22, 9, -1, -13, -6, -13, -2, 7, 1, 22, 24, 39, 27, 38, 31, 19, 35, -14, 34, -28, 23, -25, 1, -13, -2)
+polygon = PackedVector2Array(-13, -6, -27, -1, -32, 24, -16, 37, 21, 38, 24, 22, 9, -1, -13, -6, -13, -2, 7, 1, 22, 24, 19, 35, -14, 34, -28, 23, -25, 1, -13, -2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 20)
