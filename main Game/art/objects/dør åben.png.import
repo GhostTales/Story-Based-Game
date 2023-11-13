@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://qqhek3hsfyft"
+=======
+uid="uid://lmrc7cpgyen5"
+>>>>>>> 4229f07622c49d8ca2ed1f23f011948f57c5d616
 path="res://.godot/imported/dør åben.png-7c4d2f0808e3f44fc9143b1ce432ecd7.ctex"
 metadata={
 "vram_texture": false

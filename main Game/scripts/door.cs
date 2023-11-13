@@ -18,13 +18,13 @@ public partial class door : StaticBody2D
 		CurrentState = TrykPlade.CurrentState;
 		if (CurrentState == false)
 		{
-			door_sprite.Texture = (Texture2D)GD.Load("res://art/objects/chest_01.png");
+			door_sprite.Texture = (Texture2D)GD.Load("res://art/objects/dør lukket.png");
 			GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
 		}
 		else
 		{
 			GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
-			door_sprite.Texture = (Texture2D)GD.Load("res://art/objects/coin_silver.png");
+			door_sprite.Texture = (Texture2D)GD.Load("res://art/objects/dør åben.png");
 		}
 	}
 }
