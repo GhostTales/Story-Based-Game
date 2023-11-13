@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbfgc4fvupdo"]
 
 [ext_resource type="Script" path="res://scripts/SignPopup.cs" id="1_sx7uv"]
-[ext_resource type="Texture2D" uid="uid://dj2ya83ted1uf" path="res://art/objects/wooden_popup.png" id="2_8iipe"]
+[ext_resource type="Texture2D" uid="uid://dep1o2xby302x" path="res://art/objects/wooden_popup.png" id="2_8iipe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lyb1p"]
 radius = 38.0132
