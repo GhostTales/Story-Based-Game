@@ -1,8 +1,8 @@
 [gd_scene load_steps=57 format=3 uid="uid://yhuwhw5i6016"]
 
 [ext_resource type="Script" path="res://scripts/player.cs" id="1_4287k"]
-[ext_resource type="Texture2D" uid="uid://ff5rrvokyjn8" path="res://art/characters/player.png" id="2_r62rq"]
-[ext_resource type="AudioStream" uid="uid://cle88ltlr001f" path="res://sound/sfx_step_grass_l.ogg" id="3_5rlhr"]
+[ext_resource type="Texture2D" uid="uid://bd7troxaec6jh" path="res://art/characters/player.png" id="2_r62rq"]
+[ext_resource type="AudioStream" uid="uid://d4bea0maj5jgo" path="res://sound/sfx_step_grass_l.ogg" id="3_5rlhr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xtcr7"]
 atlas = ExtResource("2_r62rq")

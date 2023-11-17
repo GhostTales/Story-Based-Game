@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cptsfmrssqfyy"]
 
-[ext_resource type="Texture2D" uid="uid://c7kh3sqe5bl42" path="res://art/objects/rock.png" id="1_7ke2j"]
+[ext_resource type="Texture2D" uid="uid://bywxveu6kwxfg" path="res://art/objects/rock.png" id="1_7ke2j"]
 
 [node name="RigidBody2D" type="RigidBody2D"]
 gravity_scale = 0.0

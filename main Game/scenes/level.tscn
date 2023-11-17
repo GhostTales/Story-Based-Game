@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://bl5pcx4l11fjg"]
 
-[ext_resource type="Texture2D" uid="uid://clt7ectrdk835" path="res://art/tilesets/plains.png" id="1_3dy36"]
+[ext_resource type="Texture2D" uid="uid://djxstmq5sj3bm" path="res://art/tilesets/plains.png" id="1_3dy36"]
 [ext_resource type="PackedScene" uid="uid://yhuwhw5i6016" path="res://scenes/player.tscn" id="1_y2xng"]
-[ext_resource type="Texture2D" uid="uid://c1s6bd4erm8yn" path="res://art/tilesets/grass.png" id="2_7tskl"]
-[ext_resource type="Texture2D" uid="uid://bsurbhol2mipi" path="res://art/objects/objects.png" id="3_sna8h"]
+[ext_resource type="Texture2D" uid="uid://cgew5kllx74rl" path="res://art/tilesets/grass.png" id="2_7tskl"]
+[ext_resource type="Texture2D" uid="uid://dv1lv448pmk6h" path="res://art/objects/objects.png" id="3_sna8h"]
 [ext_resource type="PackedScene" uid="uid://bbfgc4fvupdo" path="res://scenes/sign_popup.tscn" id="6_52haf"]
 [ext_resource type="PackedScene" uid="uid://ixarr32csbal" path="res://scenes/Decoder popup.tscn" id="7_qoh5f"]
 [ext_resource type="Script" path="res://scripts/MorseGenerator.cs" id="7_w76fm"]

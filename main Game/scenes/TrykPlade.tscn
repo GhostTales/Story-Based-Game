@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cfq6qiyj7adtn"]
 
 [ext_resource type="Script" path="res://scripts/TrykPlade.cs" id="1_8gbxd"]
-[ext_resource type="Texture2D" uid="uid://fy3y77synpkr" path="res://art/objects/tryk plade færdig.png" id="2_3bhis"]
+[ext_resource type="Texture2D" uid="uid://0vksbfwfhq2k" path="res://art/objects/tryk plade færdig.png" id="2_3bhis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8548"]
 size = Vector2(21, 18)
